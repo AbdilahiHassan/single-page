@@ -4,10 +4,16 @@ const PersonTable = (props) => {
   const rows = props.people.map((person) => {
     return (
       <tr key={person.id}>
+
         <td>{person.firstName}</td>
         <td>{person.phoneNumber}</td>
            
         <td>{(person.inCity == null ? "No City" : person.inCity.cityName)}</td>
+
+
+        <td>{person.FirstName}</td>
+        <td>{person.PhoneNumber}</td>
+        <td>{person.InCityId}</td>
 
         <td>
           <button

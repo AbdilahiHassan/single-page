@@ -4,10 +4,17 @@ class PersonCreate extends Component {
     event.preventDefault();
  console.log(event);
     const person = {
+<<<<<<< HEAD
     
       FirstName: event.target["FirstName"].value,
       InCityId: event.target["InCityId"].value,
         PhoneNumber: Number(event.target["PhoneNumber"].value),
+=======
+        Id: 0,
+        FirstName: event.target["FirstName"].value,
+        PhoneNumber: event.target["PhoneNumber"].value,
+        InCityId: Number(event.target["InCityId"].value),
+>>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
     };
 
     this.props.addPerson(person);
@@ -35,15 +42,26 @@ class PersonCreate extends Component {
             />
           </div>
           <div className="row mb-2">
+<<<<<<< HEAD
             <label htmlFor="Name" className="col-2 mt-2">
+=======
+            <label htmlFor="InCityId" className="col-2 mt-2">
+>>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
             InCityId:
             </label>
             <input
               id="InCityId"
+<<<<<<< HEAD
               type="text"
               required
               className="form-control col-10"
               placeholder="Enter City"
+=======
+              type="number"
+              required
+              className="form-control col-10"
+              placeholder="Enter InCityId"
+>>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
             />
           </div>
           <div className="row mb-2">

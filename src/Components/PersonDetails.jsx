@@ -13,8 +13,13 @@ const PersonDetails = (props) => {
           <p>{props.person.PhoneNumber}</p>
         </li>
         <li className="list-group-item">
+<<<<<<< HEAD
           <b>Name:</b>
           <p>{props.person.Name}</p>
+=======
+          <b>InCityId:</b>
+          <p>{props.person.InCityId}</p>
+>>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
         </li>
 
         <li className="list-group-item">
