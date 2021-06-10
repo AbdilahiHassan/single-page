@@ -1,26 +1,31 @@
+
 import React, { Component } from "react";
 class PersonCreate extends Component {
   createperson = (event) => {
     event.preventDefault();
  console.log(event);
     const person = {
-<<<<<<< HEAD
-    
-      FirstName: event.target["FirstName"].value,
-      InCityId: event.target["InCityId"].value,
-        PhoneNumber: Number(event.target["PhoneNumber"].value),
-=======
         Id: 0,
         FirstName: event.target["FirstName"].value,
         PhoneNumber: event.target["PhoneNumber"].value,
         InCityId: Number(event.target["InCityId"].value),
->>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
     };
 
     this.props.addPerson(person);
   };
 
+
   render() {
+
+    const options = this.props.cityArray.map((city) => {
+      return (
+        <option key={city.id} value={city.id}>
+          {city.CityName}
+        </option>
+      );
+    });
+
+    
     return (
       <div className="col-md-6">
         <div className="row">
@@ -32,6 +37,7 @@ class PersonCreate extends Component {
             <label htmlFor="FirstName" className="col-2 mt-2">
             FirstName:
             </label>
+
             <input
               id="FirstName"
               type="text"
@@ -40,29 +46,17 @@ class PersonCreate extends Component {
               className="form-control col-10"
               placeholder="Enter Name"
             />
+
           </div>
           <div className="row mb-2">
-<<<<<<< HEAD
-            <label htmlFor="Name" className="col-2 mt-2">
-=======
             <label htmlFor="InCityId" className="col-2 mt-2">
->>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
             InCityId:
             </label>
-            <input
-              id="InCityId"
-<<<<<<< HEAD
-              type="text"
-              required
-              className="form-control col-10"
-              placeholder="Enter City"
-=======
-              type="number"
-              required
-              className="form-control col-10"
-              placeholder="Enter InCityId"
->>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
-            />
+      
+            <select id="InCityId"  className="form-control col-10">
+                 {options}
+
+            </select>
           </div>
           <div className="row mb-2">
             <label htmlFor="PhoneNumber" className="col-2 mt-2">

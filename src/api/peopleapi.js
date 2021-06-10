@@ -1,13 +1,25 @@
-<<<<<<< HEAD
+
 import axios from 'axios';
-=======
->>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
+
+
+
+
 export default function getPeople() {
     return fetch('https://localhost:44327/api/React')
         .then(data => data.json());
 }
 
-<<<<<<< HEAD
+
+export  function getincity() {
+    return fetch('https://localhost:44327/api/React/incity')
+        .then(data => data.json());
+}
+
+
+
+
+
+
 export async function getPersonById(id) {
     try {
         let response = await fetch('https://localhost:44327/api/React/' + id);
@@ -20,6 +32,7 @@ export async function getPersonById(id) {
         console.log('Error!', e);
     }
 }
+
 
 export async function createperson(person) {
 
@@ -52,9 +65,4 @@ export async function deleteperson(id) {
         console.log('Error!', e);
         return false;
     }
-=======
-export function getPersonById(id) {
-    return fetch('https://localhost:44327/api/React/' + id)
-        .then(data => data.json());
->>>>>>> 0fe07416e4f5b15bb2aed1c227ccd609e88a573b
 }

@@ -6,6 +6,7 @@ const PersonTable = (props) => {
       <tr key={person.id}>
 
         <td>{person.firstName}</td>
+        
         <td>{person.phoneNumber}</td>
            
         <td>{(person.inCity == null ? "No City" : person.inCity.cityName)}</td>
